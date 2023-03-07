@@ -9,7 +9,7 @@ namespace p7.Admin
 {
     public partial class Cancel : System.Web.UI.Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);

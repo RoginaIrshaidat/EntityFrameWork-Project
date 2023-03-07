@@ -13,7 +13,7 @@ namespace p7.Account
     {
         protected void CreateUser_Click(object sender, EventArgs e)
         {
-            project7Entities1 context = new project7Entities1();
+            project7Entities3 context = new project7Entities3();
 
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();

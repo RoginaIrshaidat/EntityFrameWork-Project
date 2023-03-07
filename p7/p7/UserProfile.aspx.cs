@@ -12,7 +12,7 @@ namespace p7
 {
     public partial class UserProfile : System.Web.UI.Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -26,18 +26,18 @@ namespace p7
                 name1.InnerHtml = ss.Name;
                 nameLabel.InnerHtml = ss.Name;
                 emailLabel.InnerHtml = ss.Email;
+                phoneLabel.InnerHtml = ss.PhoneNumber;
                 // ageLabel.InnerHtml += ss.Age;
-                phoneLabel.InnerHtml += ss.PhoneNumber;
 
                 if (ss.Gender == false)
                 {
-                    if (ss.Photo == "" || ss.Photo == null) { userImg.ImageUrl = "images\\boy.jfif"; commentImg.ImageUrl = "images\\boy.png"; }
+                    if (ss.Photo == "" || ss.Photo == null) { userImg.ImageUrl = "images\\boy.jfif"; commentImg.ImageUrl = "images\\boy.jfif"; }
                     else { userImg.ImageUrl = ss.Photo; commentImg.ImageUrl = ss.Photo; }
 
                 }
                 if (ss.Gender == true)
 
-                    if (ss.Photo == "" || ss.Photo == null) { userImg.ImageUrl = "images\\girl.jfif"; commentImg.ImageUrl = "images\\girl.png"; }
+                    if (ss.Photo == "" || ss.Photo == null) { userImg.ImageUrl = "images\\girl.jfif"; commentImg.ImageUrl = "images\\girl.jfif"; }
                     else { userImg.ImageUrl = ss.Photo; commentImg.ImageUrl = ss.Photo; }
 
             }
@@ -88,15 +88,18 @@ namespace p7
 
             
             
-            if(FileUpload1.FileName!= null || FileUpload1.FileName != "")
+            
+            if (FileUpload1.HasFile) 
             {
                 string folderPath = Server.MapPath("~/images/");
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
+
+
                 FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
-                ss.Photo= "/images//"+FileUpload1.FileName;
+                ss.Photo = "/images//" + FileUpload1.FileName;
             }
             ss.Name = txtName.Text;
             ss.Email = txtEmail.Text;
@@ -167,7 +170,7 @@ namespace p7
         protected void PostBtn_Click(object sender, EventArgs e)
         {
 
-            project7Entities1 x = new project7Entities1();
+            project7Entities3 x = new project7Entities3();
             var newComment = new Comment();
             newComment.userID = Session["id"].ToString();
             newComment.message = txtComment.Value;

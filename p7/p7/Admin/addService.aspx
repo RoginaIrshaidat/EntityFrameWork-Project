@@ -51,10 +51,10 @@
                             <div class="card-body">
                                  <div class="row">
                                     <div class="card-body text-center">
-                                <asp:Image ID="userImg" runat="server" alt="User Image" class="rounded-circle img-fluid" Style="width: 150px;height:150px; border:solid 3px #333333;" />
+                                <asp:Image ID="userImg" runat="server" alt="User Image" ImageUrl="..//assets//img//gallery//uploadImage.png" class="rounded-circle img-fluid" Style="width: 150px;height:150px; " />
 
-                                
-                                <asp:FileUpload ID="FileUpload1" runat="server" style="margin-left: 40%; " />
+                                <br /><br />
+                                <asp:FileUpload ID="FileUpload1" runat="server"  style="margin-left: 33%; " />
 
                             </div>
 
@@ -85,12 +85,17 @@
                                     </div>
                                 </div>
                                 <hr/>
-                                
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                       <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                                    </div>
+                                    
+                                </div>
 
                                     <div class="col-sm-9" style="margin-left:50%;">
                                         <div class="row">
                                             
-                                            <div class="col"><<asp:Button ID="Cancel" runat="server" Text="Cancel" OnClick="Cancel_Click"  class="btn btn-primary" style="margin-left:60%;"/></div>
+                                            <div class="col"><asp:Button ID="Cancel" runat="server" Text="Cancel" OnClick="Cancel_Click"  class="btn btn-primary" style="margin-left:60%;"/></div>
                                             <div class="col"><asp:Button ID="update" runat="server" Text="Save"   class="btn btn-success" OnClick="update_Click"/> </div>
 
                                         </div>

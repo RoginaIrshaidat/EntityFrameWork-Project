@@ -192,6 +192,14 @@
     <Content Include="Admin\servicsEdit.aspx" />
     <Content Include="AhmadOdat.aspx" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\img\gallery\1.jpeg" />
+    <Content Include="assets\img\gallery\2.jpeg" />
+    <Content Include="assets\img\gallery\3.jpeg" />
+    <Content Include="assets\img\gallery\4.jpeg" />
+    <Content Include="assets\img\gallery\5.jpeg" />
+    <Content Include="assets\img\gallery\6.jpeg" />
+    <Content Include="assets\img\gallery\7.jpeg" />
+    <Content Include="assets\img\gallery\8.jpeg" />
     <Content Include="assets\img\about.jpg" />
     <Content Include="assets\img\apple-touch-icon.png" />
     <Content Include="assets\img\backImg.jpeg" />
@@ -214,6 +222,7 @@
     <Content Include="assets\img\gallery\gallery-6.jpg" />
     <Content Include="assets\img\gallery\gallery-7.jpg" />
     <Content Include="assets\img\gallery\gallery-8.jpg" />
+    <Content Include="assets\img\gallery\uploadImage.png" />
     <Content Include="assets\img\hero-bg.jpg" />
     <Content Include="assets\img\hh.png" />
     <Content Include="assets\img\ll.png" />
@@ -407,8 +416,8 @@
     <Content Include="test33.aspx" />
     <Content Include="test44.aspx" />
     <Content Include="UserProfile.aspx" />
-    <Content Include="WebForm2.aspx" />
-    <Content Include="WebForm3.aspx" />
+    <Content Include="About_Us.aspx" />
+    <Content Include="Contact us.aspx" />
     <Content Include="WebForm4.aspx" />
     <Content Include="WebForm5.aspx" />
     <Content Include="lib\owlcarousel\LICENSE" />
@@ -419,6 +428,7 @@
     <Content Include="Admin\css\bootstrap\mixins\.DS_Store" />
     <Content Include="Admin\js\.DS_Store" />
     <Content Include="WebForm6.aspx" />
+    <Content Include="Admin\Web.config" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -426,7 +436,6 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -792,19 +801,19 @@
     <Compile Include="services.aspx.designer.cs">
       <DependentUpon>services.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="About_Us.aspx.cs">
+      <DependentUpon>About_Us.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
+    <Compile Include="About_Us.aspx.designer.cs">
+      <DependentUpon>About_Us.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="Contact us.aspx.cs">
+      <DependentUpon>Contact us.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
+    <Compile Include="Contact us.aspx.designer.cs">
+      <DependentUpon>Contact us.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm4.aspx.cs">
       <DependentUpon>WebForm4.aspx</DependentUpon>

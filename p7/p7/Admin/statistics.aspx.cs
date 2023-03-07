@@ -9,7 +9,7 @@ namespace p7.Account
 {
     public partial class statistics : System.Web.UI.Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             var pNum = (from m in db.AspNetUsers select m).Count();

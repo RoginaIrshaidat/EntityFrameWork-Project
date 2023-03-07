@@ -10,7 +10,7 @@ namespace p7.Admin
 {
     public partial class servicsEdit : System.Web.UI.Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -35,20 +35,22 @@ namespace p7.Admin
         {
             int id = Convert.ToInt32(Request.QueryString["id"]);
             var store = db.Services.Find(id);
-
-            if (FileUpload1.FileName != null || FileUpload1.FileName != "")
+            if (FileUpload1.HasFile)
             {
                 string folderPath = Server.MapPath("~/images/");
                 if (!Directory.Exists(folderPath))
                 {
                     Directory.CreateDirectory(folderPath);
                 }
+
+
                 FileUpload1.SaveAs(folderPath + Path.GetFileName(FileUpload1.FileName));
                 store.ServiceImage = "/images//" + FileUpload1.FileName;
             }
+            
             store.ServiceName = txtName.Text;
             store.ServiceDescription = txtComment.Value;
-            if (FileUpload1.FileName != null) { store.ServiceImage = "/images\\" + FileUpload1.FileName; }
+            //if (FileUpload1.FileName != null) { store.ServiceImage = "/images\\" + FileUpload1.FileName; }
 
             db.SaveChanges();
             Response.Redirect("Services.aspx");

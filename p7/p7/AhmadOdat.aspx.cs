@@ -10,7 +10,7 @@ namespace p7
 {
     public partial class AhmadOdat : System.Web.UI.Page
     {
-        project7Entities1 context = new project7Entities1();
+        project7Entities3 context = new project7Entities3();
 
         protected void Page_Load(object sender, EventArgs e)
         {

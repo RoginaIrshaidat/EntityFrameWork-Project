@@ -13,10 +13,10 @@ namespace p7
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class project7Entities1 : DbContext
+    public partial class project7Entities3 : DbContext
     {
-        public project7Entities1()
-            : base("name=project7Entities1")
+        public project7Entities3()       ///Constructor>>>>>
+            : base("name=project7Entities3")
         {
         }
     
@@ -25,7 +25,7 @@ namespace p7
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }//auto method>>>>when method and (get;set) are in the same row>>>>
         public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }

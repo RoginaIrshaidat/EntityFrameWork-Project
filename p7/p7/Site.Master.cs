@@ -5,6 +5,7 @@ using System.Security.Principal;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 
@@ -69,12 +70,39 @@ namespace p7
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            //string currentPage = Page.AppRelativeVirtualPath;
 
+            //switch (currentPage)
+            //{
+            //    case "~/Default.aspx":
+            //        homeLink.Attributes["class"] = "footLinks active";
+                    
+            //        break;
+            //    case "~/services.aspx":
+            //        servicesLink.Attributes["class"] = "footLinks active";
+            //        break;
+            //    case "~/About_Us.aspx":
+            //        aboutUsLink.Attributes["class"] = "footLinks active";
+            //        break;
+            //    case "~/Contact_us.aspx":
+            //        contactUsLink.Attributes["class"] = "footLinks active";
+            //        break;
+            //}
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if(IsPostBack)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "confirm", "if(!confirm('Are you sure you want to proceed?')){return false;}", true);
+
+            }
         }
     }
 

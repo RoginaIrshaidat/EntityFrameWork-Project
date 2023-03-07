@@ -10,7 +10,7 @@ namespace p7
 {
     public partial class deleteReservation : System.Web.UI.Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             try

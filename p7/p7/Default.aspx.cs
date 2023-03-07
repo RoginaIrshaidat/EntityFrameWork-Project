@@ -9,7 +9,7 @@ namespace p7
 {
     public partial class _Default : Page
     {
-        project7Entities1 db = new project7Entities1();
+        project7Entities3 db = new project7Entities3();
         protected void Page_Load(object sender, EventArgs e)
         {
             Calendar1.SelectedDate = DateTime.Today;

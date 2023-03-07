@@ -92,6 +92,15 @@
             padding: 80px 70px;
             transition: all ease-in-out 0.3s;
         }
+        .auto-style1 {
+            width: 154px;
+        }
+        .footLinks{
+            
+              /*  justify-content: center !important;*/
+               padding-left: 37% !important ;
+               color: blue;
+        }
     </style>
 </head>
 <body>
@@ -160,14 +169,12 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0" style="margin-bottom:0px">
         <ul>
-          <li><a class="nav-link scrollto active" href="/Default.aspx">Home</a></li>
+          <li><a  class="nav-link scrollto    " href="/Default.aspx">Home</a></li>
             <li><a class="nav-link scrollto" href="/services.aspx">Services</a></li>
-          <li><a class="nav-link scrollto" href="/WebForm2.aspx">About</a></li>
-          <%--<li><a class="nav-link scrollto" href="#services">Services</a></li>--%>
-          
-      
+          <li><a class="nav-link scrollto" href="About_Us.aspx">About </a></li>
+
          
-          <li><a class="nav-link scrollto" href="/WebForm3.aspx">Contact</a></li>
+          <li><a class="nav-link scrollto" href="Contact us.aspx">Contact</a></li>
 
             <% if (Context.User.Identity.GetUserId() == null)
                 { %>
@@ -207,7 +214,7 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+          <div class="col-lg-4 col-md-6 footer-contact">
             <h3>Globe</h3>
             <p>
               A108 Adam Street <br>
@@ -218,34 +225,37 @@
             </p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links">
+          <div style="text-align: center;" class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <ul >
+              <li  class="footLinks"><i class=" bx bx-chevron-right"></i> <a href="Default.aspx">Home</a></li>
+              <li  class="footLinks"><i class="bx bx-chevron-right "></i><a href="services.aspx">Services</a></li>
+              <li  class="footLinks"><i class="bx bx-chevron-right"></i> <a href="About_Us.aspx">About us</a></li>
+              <li  class="footLinks"><i class="bx bx-chevron-right"></i> <a href="Contact us.aspx">Contact us</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links">
+          <div style="text-align: center;" class="col-lg-4 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">COSMETIC DENTISTRY</a></li>
+              <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">ENDODONTICS</a></li>
+              <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">SURGICAL TREATMENTS</a></li>
+              <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">PROSTHODONTICS</a></li>
+              <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">PAEDIATRIC DENTISTRY</a></li>
+                <li class="footLinks"><i class="bx bx-chevron-right"></i> <a href="services.aspx">ORTHODONTICS</a></li>
+
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-6 footer-newsletter">
+<%--          <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Newsletter</h4>
             <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Subscribe"  class="auto-style1">
+                <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
             </form>
-          </div>
+          </div>--%>
 
         </div>
       </div>
@@ -255,7 +265,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>Globe</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
